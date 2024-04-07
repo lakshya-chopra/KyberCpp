@@ -9,9 +9,6 @@ void EncapsulateKey::initSeed(){
 	
                          this->pkey = pkey;
                          this->kyberVersion = kyberVersion;
-				shrd_key0.clear();
-				shrd_key0.resize(32);
-
 
                  }
 	
@@ -27,10 +24,9 @@ void EncapsulateKey::initSeed(){
                                 std::cout<<"am here"<<std::endl;
                                 auto _cipher = std::span<uint8_t,kyber512_kem::CIPHER_LEN>(cipher);
                                  auto _pkey = std::span<uint8_t, kyber512_kem::PKEY_LEN>(pkey);
-auto _shrd_key0 = std::span<uint8_t,32>(shrd_key0);					
 
                          	auto skdf = kyber512_kem::encapsulate(m,_pkey,_cipher);
-                                skdf.squeeze(_shrd_key0);
+                                skdf.squeeze(shrd_key0);
 				
 //write this to a file.
                          }
@@ -42,7 +38,7 @@ auto _shrd_key0 = std::span<uint8_t,32>(shrd_key0);
                         return cipher;
                  }
 
-std::vector<uint8_t> EncapsulateKey::getSharedKey(){
+std::array<uint8_t,32> EncapsulateKey::getSharedKey(){
 
 	return shrd_key0;
 

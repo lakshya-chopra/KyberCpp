@@ -25,11 +25,11 @@ class EncapsulateKey{
 
                 void initSeed();                        
 		public:
-		                std::vector<uint8_t> shrd_key0;
+		                std::array<uint8_t,32> shrd_key0{1,2,3,4,5,6,7};
 			EncapsulateKey(std::vector<uint8_t> pkey,std::string kyberVersion);
 			void encapsulate();
 			auto getCipher() -> std::vector <uint8_t>;
-			std::vector<uint8_t> getSharedKey();
+			std::array<uint8_t,32> getSharedKey();
 
 };
 

@@ -21,10 +21,10 @@ class DecapsulateKey{
 		
 	public:
 
-		std::vector<uint8_t> shrd_key1;
+		std::array<uint8_t,32> shrd_key1{};
 		DecapsulateKey(std::vector<uint8_t> skey, std::vector<uint8_t> cipher);
 		void decapsulate();
-		std::vector<uint8_t> getSharedKey();
+		std::array<uint8_t,32> getSharedKey();
 };
 
 #endif

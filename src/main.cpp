@@ -63,14 +63,20 @@ int main(){
        DecapsulateKey decaps(skey,cipher);
 
 	       auto shared_key1 = decaps.getSharedKey();
-        ss.str("");
-        ss.clear();
-        for (auto i : shared_key1){
-                ss << std::hex <<static_cast<int>(i);
-}
+//        ss.str("");
+ //       ss.clear();
+  //      for (auto i : shared_key1){
+//                ss << std::hex <<static_cast<int>(i);
+//}
 
         std::cout<<"\n Here's the shared secret " <<std::endl;
-        std::cout<<ss.str()<<std::endl;
+ //       std::cout<<ss.str()<<std::endl;
+
+{
+	using namespace kyber_utils;
+	std::cout<<to_hex(shared_key1)<<std::endl;		
+
+}
 
 	return 0;
 }
