@@ -1,0 +1,3 @@
+#ignore all .out and .exe files:
+*.out
+*.exe
