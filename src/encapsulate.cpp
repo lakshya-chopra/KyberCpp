@@ -1,22 +1,22 @@
 #include "encapsulate.hpp"
 
 void EncapsulateKey::initSeed(){
-                        prng::prng_t prng;
                         prng.read(m);
 
                 }
-                 EncapsulateKey::EncapsulateKey(std::vector<uint8_t> pkey,std::string kyberVersion){
+                 EncapsulateKey::EncapsulateKey(std::vector<uint8_t> pkey,std::string kyberVersion,prng::prng_t prng){
 	
                          this->pkey = pkey;
                          this->kyberVersion = kyberVersion;
-
+			this->prng = prng;
                  }
 	
         	void EncapsulateKey::encapsulate(){
 
                          cipher.clear();
                          cipher.resize(kyber512_kem::CIPHER_LEN);
-                         initSeed(); //fill the values
+//                         initSeed(); //fill the values
+			prng.read(m);
 
                          if (kyberVersion == "512"){
 

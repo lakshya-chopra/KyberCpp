@@ -1,16 +1,15 @@
 #include "keygenerator.hpp"
 
 void KeyGenerator::fill_seeds(){
-        prng::prng_t prng;
         prng.read(seed1);
         prng.read(seed2);
 
         }
 
-	KeyGenerator::KeyGenerator(std::string kyberVersion){
+	KeyGenerator::KeyGenerator(std::string kyberVersion,prng::prng_t prng){
 		
 		this->kyberVersion = kyberVersion;
-			
+this->prng = prng;			
 		switch(stoi(kyberVersion)){
 			case 512:
 				

@@ -23,8 +23,9 @@ int main(){
                         break;
                 }
         }
+	prng::prng_t prng;
 
-        KeyGenerator keygen(kyberVers);
+        KeyGenerator keygen(kyberVers,prng);
         keygen.generateKeys();
 
         auto pkey = keygen.getPK();
@@ -45,7 +46,7 @@ int main(){
 
         std::cout<<"\nfault here!\n"<<std::endl;
 
-        EncapsulateKey encaps(pkey,kyberVers);
+        EncapsulateKey encaps(pkey,kyberVers,prng);
         encaps.encapsulate();
 
         ss.str("");

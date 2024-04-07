@@ -22,6 +22,8 @@ class KeyGenerator{
 	
         std::vector<uint8_t> pkey; //depending on the version, we'll resize.
         std::vector<uint8_t> skey;
+	
+	prng::prng_t prng;
 
         std::array<uint8_t,32> seed1{};
         std::array<uint8_t,32> seed2{};
@@ -31,7 +33,7 @@ class KeyGenerator{
 	void fill_seeds();
 	
 public:
-	KeyGenerator(std::string kyberVersion="512");
+	KeyGenerator(std::string kyberVersion,prng::prng_t prng);
 	
 	void generateKeys();
 	auto getSK() -> std::vector<uint8_t>;
