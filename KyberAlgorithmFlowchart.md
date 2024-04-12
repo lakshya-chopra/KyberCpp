@@ -21,9 +21,30 @@
 
 ## A bit of mathematical background:
 
+  ## Ring:
+  A ring is a set R that is equipped with 2 binary operations: (+) & (•) that satisfy the following 3 axioms:
+    1. R is an abelian group under addition (commutative, identity, inverse , associative)
+    2. R is monoid under multiplication, i.e. multiplication is associative & multiplicative identity is satisfied.
+    3. Multiplication is distributive w.r.t to addition.
+
+  Rings generalize fields, and the RING elements may consist of scalars, functions, matrices, etc.
+  An example: 
+  ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/b18f3b9d-5918-4a69-a34e-dffd05397a4b)
+
+  An important example is **Z<sub>n</sub>**, which is the set of integers mod (n): the quotient group & the polynomial ring.
+  
+  ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/15d63dee-e1cc-4e9c-98d4-a855ebf697e5)
+  ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/15852b69-ee2c-4aec-a414-b4cff30a7565)
+
+
+  ## Lattices:
+  
   - An **integral LATTICE** is defined as a Z-linear combination (integral scalar values) of n independent vectors, b<sub>i</sub> belonging to Z<sup>n</sup>.
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/c74d0ce4-e228-4d98-b60a-a90305b16560)
-  - Reason why lattices are used? because they pose one such optimization problem which is considered to be quite hard to solve, i.e. The shortest vector problem
+  - Reason why lattices are used? because they pose one such optimization problem which is considered to be quite hard to solve, i.e. The shortest vector problem.
 
+  ## LWE:
+  ## Rings in LWE:
 
+  In this, a secret polynomial from a ring is concealed with the noisy data sampled from a structured ring.
 
