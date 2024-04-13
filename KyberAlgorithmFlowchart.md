@@ -40,11 +40,24 @@
   ## Lattices:
   
   - An **integral LATTICE** is defined as a Z-linear combination (integral scalar values) of n independent vectors, b<sub>i</sub> belonging to Z<sup>n</sup>.
+  - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/00d6ef32-2e1c-46e7-9fec-838d9505d015)
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/c74d0ce4-e228-4d98-b60a-a90305b16560)
-  - Reason why lattices are used? because they pose one such optimization problem which is considered to be quite hard to solve, i.e. The shortest vector problem.
+  - Reason why lattices are used? because they pose af few mathematical optimization problems which are considered to be quite hard to solve, i.e. The shortest vector problem, GapSVP & the CVP.
+  - In SVP, the goal is to find the shortest non-zero vector in an integral lattice, i.e. given a vector space V and a norm N (generally the Euclidean norm) for a lattice L, one must find the shortest vector, |v|<sub>n</sub> = λ(L),where λ(L) denotes the length of the shortest non-zero vector in L.
+  - In GapSVP, we are concerned with finding whether the length of such a vector is greater than or below a certain threshold (2 parameters: alpha & beta).
+  - This problem can be solved (with quite ease) in lower dimensional spaces with a **good** basis (which are nearly orthogonal to each other), if however, a basis which is **bad** (vectors nearly collinear to each other) & the dimension is high, it becomes terribly hard to solve, even for QCs.
+  - [LLL](https://en.wikipedia.org/wiki/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz_lattice_basis_reduction_algorithm) is one such algorithm which can solve such problems in polynomial time
 
   ## LWE:
+  
+  
   ## Rings in LWE:
-
+  
   In this, a secret polynomial from a ring is concealed with the noisy data sampled from a structured ring.
 
+## References:
+1. [crypto school croatia](https://summerschool-croatia.cs.ru.nl/2015/Lattice-based%20crypto.pdf)
+2. [LWE & its relation to Lattices](https://web.stanford.edu/class/cs354/scribe/lecture14.pdf)
+3. [LLL algo](https://en.wikipedia.org/wiki/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz_lattice_basis_reduction_algorithm)
+4. [Ring LWE](https://www.cse.iitk.ac.in/users/angshuman/assets/pdf/RINGLWE_SPACE_2016.pdf)
+5. [PQC](https://summerschool-croatia.cs.ru.nl/2018/slides/Introduction%20to%20post-quantum%20cryptography%20and%20learning%20with%20errors.pdf)
