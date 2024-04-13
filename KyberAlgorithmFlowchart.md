@@ -49,6 +49,14 @@
   - [LLL](https://en.wikipedia.org/wiki/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz_lattice_basis_reduction_algorithm) is one such algorithm which can solve such problems in polynomial time
 
   ## LWE:
+  - In LWE, given a linear system, A.s = t, where A is the coefficient / public matrix and s is the solution vector to this equation, we purposely introduce some noise in the system, that is sampled from a Gaussian Distribution (usually discrete) or a cyclotomic ring, this noise is kept secret & makes it really hard to find the solution to this problem.
+  - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/da569458-d4d3-4461-9ae7-9b6805537583)
+  - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/19723259-2615-4933-ba14-de9389d17f97)
+
+  - In total,
+    ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/d788125d-7735-413f-b60e-6b592165270e)
+
+  - 
   
   
   ## Rings in LWE:
