@@ -1,6 +1,7 @@
 ## Program Flow:
 
-  - Firstly, with the help of a Hardware/Secure RNG, 3 seeds : d, z & m are generated. Seeds 'd' and 'z' are used to create a random array of 32 bytes which is used in the generation of the keypair: pk & sk. Seed m is used for encapsulation, we'll come to that later.
+  - Firstly, with the help of a Hardware/Secure RNG, 3 seeds : d, z & m are generated. Seeds 'd' and 'z' are used to create a random array of 32 bytes which is used in the generation of the keypair: pk & sk. Seed m is used for encapsulation.
+  - d is used for the generation of A matrix, z for sampling the error & m for generation of the SHAKE256 key.
   - After keygen, the public key which is transmitted across a public & insecure channel by the sender (here, Alice) to the receiver (refer to them as Bob). The Secret key is kept secure by Alice and never shared with anyone.
   - Bob uses the public key of Alice to generate a shared secret and a cipher, out of which only the cipher is sent back to Alice.
   - Alice decapsulates the cipher using her secret key and obtains the shared secret.
@@ -50,6 +51,7 @@
 
   ## LWE:
   - In LWE, given a linear system, A.s = t, where A is the coefficient / public matrix and s is the solution vector to this equation, we purposely introduce some noise in the system, that is sampled from a Gaussian Distribution (usually discrete) or a cyclotomic ring, this noise is kept secret & makes it really hard to find the solution to this problem.
+  - The Matrix A and s are uniformly sampled from Z<sup>m*n</sup> & Z<sup>n</sup> respectively.
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/da569458-d4d3-4461-9ae7-9b6805537583)
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/19723259-2615-4933-ba14-de9389d17f97)
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/3d00dab7-a639-4a29-888d-e367491a630d)
@@ -63,8 +65,9 @@
   - This is basically like a BDD problem, where we are given a point b (the point with noise added), and from that we have to find the vector v = s<sup>t</sup>A, which allows us to find the secret (devoid of all the noise).
   - SIS vs LWE
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/7c0372eb-378f-4ff9-89bf-bc2257c3d045)
-  - The public key, A is uniformly chosen from a set of integer m*n matrices modulo q.
+  - The public key, A is uniformly chosen from a set of integer m*n matrices modulo q. Below, the General PKC from LWE system for encrypting multiple bits of plain text: [the original system from regev can only encrypt a single bit of message]
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/46d205e6-4f3d-4f4e-bfaf-764c951158bb)
+  - Here, multiple secret keys are chosen uniformly from Z<sup>n</sup> modulo q, hence a secret key matrix, s, of dimension **n*l** is formed, similarly a matrix is uniformly sampled from Z<sup>n*m</sup>, and is termed as A. Then we take the matrix product: s<sup>T</sup>A.
 
 
 
@@ -80,3 +83,4 @@
 3. [LLL algo](https://en.wikipedia.org/wiki/Lenstra%E2%80%93Lenstra%E2%80%93Lov%C3%A1sz_lattice_basis_reduction_algorithm)
 4. [Ring LWE](https://www.cse.iitk.ac.in/users/angshuman/assets/pdf/RINGLWE_SPACE_2016.pdf)
 5. [PQC](https://summerschool-croatia.cs.ru.nl/2018/slides/Introduction%20to%20post-quantum%20cryptography%20and%20learning%20with%20errors.pdf)
+6. [General LWE PKC](https://link.springer.com/chapter/10.1007/978-981-19-7644-5_4#Sec5)
