@@ -60,7 +60,7 @@
   - In total,
     ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/d788125d-7735-413f-b60e-6b592165270e)
 
-  - LWE can too be viewed as a Lattice Problem (like SIS), like the set of all integer vectors that are congruent to A*s<sup>T</sup>
+  - LWE can too be viewed as a Lattice Problem (like SIS), like the set of all integer vectors that are congruent to s<sup>T</sup>•A modulo (q) .
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/b392369c-6c18-40f1-8d23-eb3033ecc145)
   - This is basically like a *BDD* problem, where we are given a point b (the point with noise added), and from that we have to find the vector v = s<sup>t</sup>A, which allows us to find the secret (devoid of all the noise).
   - SIS vs LWE
