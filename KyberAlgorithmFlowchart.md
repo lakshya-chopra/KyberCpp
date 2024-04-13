@@ -52,11 +52,22 @@
   - In LWE, given a linear system, A.s = t, where A is the coefficient / public matrix and s is the solution vector to this equation, we purposely introduce some noise in the system, that is sampled from a Gaussian Distribution (usually discrete) or a cyclotomic ring, this noise is kept secret & makes it really hard to find the solution to this problem.
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/da569458-d4d3-4461-9ae7-9b6805537583)
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/19723259-2615-4933-ba14-de9389d17f97)
+  - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/3d00dab7-a639-4a29-888d-e367491a630d)
+
 
   - In total,
     ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/d788125d-7735-413f-b60e-6b592165270e)
 
-  - 
+  - LWE can too be viewed as a Lattice Problem (like SIS), like the set of all integer vectors that are congruent to A*s<sup>T</sup>
+  - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/b392369c-6c18-40f1-8d23-eb3033ecc145)
+  - This is basically like a BDD problem, where we are given a point b (the point with noise added), and from that we have to find the vector v = s<sup>t</sup>A, which allows us to find the secret (devoid of all the noise).
+  - SIS vs LWE
+  - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/7c0372eb-378f-4ff9-89bf-bc2257c3d045)
+  - The public key, A is uniformly chosen from a set of integer m*n matrices modulo q.
+  - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/46d205e6-4f3d-4f4e-bfaf-764c951158bb)
+
+
+
   
   
   ## Rings in LWE:
