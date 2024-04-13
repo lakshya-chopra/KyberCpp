@@ -62,12 +62,13 @@
 
   - LWE can too be viewed as a Lattice Problem (like SIS), like the set of all integer vectors that are congruent to A*s<sup>T</sup>
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/b392369c-6c18-40f1-8d23-eb3033ecc145)
-  - This is basically like a BDD problem, where we are given a point b (the point with noise added), and from that we have to find the vector v = s<sup>t</sup>A, which allows us to find the secret (devoid of all the noise).
+  - This is basically like a *BDD* problem, where we are given a point b (the point with noise added), and from that we have to find the vector v = s<sup>t</sup>A, which allows us to find the secret (devoid of all the noise).
   - SIS vs LWE
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/7c0372eb-378f-4ff9-89bf-bc2257c3d045)
   - The public key, A is uniformly chosen from a set of integer m*n matrices modulo q. Below, the General PKC from LWE system for encrypting multiple bits of plain text: [the original system from regev can only encrypt a single bit of message]
   - ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/46d205e6-4f3d-4f4e-bfaf-764c951158bb)
   - Here, multiple secret keys are chosen uniformly from Z<sup>n</sup> modulo q, hence a secret key matrix, s, of dimension **n*l** is formed, similarly a matrix is uniformly sampled from Z<sup>n*m</sup>, and is termed as A. Then we take the matrix product: s<sup>T</sup>A.
+  - t = s<sup>T</sup>•A + e, here, t and A are the public keys, s is the secret & e is the error vector sampled from a Gaussian Distribution.
 
 
 
@@ -77,6 +78,13 @@
   
   In this, a secret polynomial from a ring is concealed with the noisy data sampled from a structured ring.
 
+  ## Module LWE:
+  MLWE is the LWE method used by CRYSTALS-Kyber, where the expression A•s + e can be thought to represent the matrix equation over the ring: 
+  ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/091a96c4-135b-4029-bce6-a7b7706e3d44)
+
+  A module is a n-tuple of ring elements.
+
+  
 ## References:
 1. [crypto school croatia](https://summerschool-croatia.cs.ru.nl/2015/Lattice-based%20crypto.pdf)
 2. [LWE & its relation to Lattices](https://web.stanford.edu/class/cs354/scribe/lecture14.pdf)
@@ -84,3 +92,4 @@
 4. [Ring LWE](https://www.cse.iitk.ac.in/users/angshuman/assets/pdf/RINGLWE_SPACE_2016.pdf)
 5. [PQC](https://summerschool-croatia.cs.ru.nl/2018/slides/Introduction%20to%20post-quantum%20cryptography%20and%20learning%20with%20errors.pdf)
 6. [General LWE PKC](https://link.springer.com/chapter/10.1007/978-981-19-7644-5_4#Sec5)
+7. [MLWE in Kyber](https://crypto.stackexchange.com/a/104393)
