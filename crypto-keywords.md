@@ -1,35 +1,35 @@
 Here's a concise division of all the commonly used cryptographic primitives & constructions:
 
   ## Hashing:
-    - SHA family:
-      - SHA1
-      - SHA2 (SHA2-256, SHA2-512)
-      - SHA3 (subset of Keccak) - SHA3-256, SHA3-512, SHAKE256, SHAKE512 (two xofs)
-    - Keccak (for variable length hashes)
+  - SHA family:
+    - SHA1
+    - SHA2 (SHA2-256, SHA2-512)
+    - SHA3 (subset of Keccak) - SHA3-256, SHA3-512, SHAKE256, SHAKE512 (two xofs)
+  - Keccak (for variable length hashes)
     ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/3009bafe-6233-4a2b-96dd-9dbc46e24b46)
-
-    - [Ref](https://crypto.stackexchange.com/a/68314)
-  ## Ciphers:
-     - Block Ciphers - AES (128/256/512), modes - CTR, CBC, GCM. 3DES
+  - [Ref](https://crypto.stackexchange.com/a/68314)
+    
+## Ciphers:
+  - Block Ciphers - AES (128/256/512), modes - CTR, CBC, GCM. 3DES
      ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/9ec0a3ea-2151-4f1f-aa87-c833f9e2eb0e)
-     - Stream Cipher: ChaCha20, Salsa20
+  - Stream Cipher: ChaCha20, Salsa20
      ChaCha20-Poly1305 is equivalent to AES-GCM (ciphering with authentication), such algorithms are known as "authenticated encryption with associated data" (AEAD).
-  ## MACs:
-    - Hash Based - HMAC-SHA256, HMAC-SHA512
-    - Poly1305, UMAC, VMAC
-    - Checksums (not really used now, vulnerable to forgery)
+## MACs:
+  - Hash Based - HMAC-SHA256, HMAC-SHA512
+  - Poly1305, UMAC, VMAC
+  - Checksums (not really used now, vulnerable to forgery)
     ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/f39f9a78-bf04-4318-bc0d-b06f198f650d)
 
-  ## Public Key Cryptography:
-    - PKC is utilised to safely transfer a symmetric key (used for encryption of critical data), from one end to the other, by making use of asymmetric algorithms, or Key exchanges like Diffie Hellman (or ECDH).
+## Public Key Cryptography:
+  - PKC is utilised to safely transfer a symmetric key (used for encryption of critical data), from one end to the other, by making use of asymmetric algorithms, or Key exchanges like Diffie Hellman (or ECDH).
     - Cryptographic protocols, primitives & constructions used: 
       - **Diffie Hellman, extensions of this are: ECDH, El Gamal, X3DH, PQXDHE.**
       - Elliptic Curve Crypt - again makes use of ECDH, though it supports a variety of curves, example: Curve25519 (X25519), P256/512
       - **Encryption Schemes - ECIES, DHIES, RSA-KEM, RSA-OAEP.**
       Asymmetric Constructions - RSA family (can be used for KEM, KEX, & DSA)
       RSA-OAEP is used for making the RSA Key Exchange **IND-CPA & IND-CCA secure.** Plain Old RSA has been deprecated.
-
       ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/46927e56-adce-47c7-a808-33bdb321d840)
+
  ## Digital Signature Algorithms:
    - RSA
    - ECDSA (can be used with a variety of curves)
