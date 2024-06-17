@@ -53,5 +53,6 @@ Here's a concise division of all the commonly used cryptographic primitives & co
 
 
 [Book](https://cryptobook.nakov.com/)
+[Overview of Cryptography](https://medium.com/@sinister/overview-of-cryptography-c7349b92a72b)
 
     
