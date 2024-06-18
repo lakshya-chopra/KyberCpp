@@ -21,12 +21,23 @@ Here's a concise division of all the commonly used cryptographic primitives & co
     ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/f39f9a78-bf04-4318-bc0d-b06f198f650d)
 
 ## Public Key Cryptography:
-  - PKC is utilised to safely transfer a symmetric key (used for encryption of critical data), from one end to the other, by making use of asymmetric algorithms, or Key exchanges like Diffie Hellman (or ECDH).
-    - Cryptographic protocols, primitives & constructions used: 
-      - **Diffie Hellman, extensions of this are: ECDH, El Gamal, X3DH, PQXDHE.**
-      - Elliptic Curve Crypt - again makes use of ECDH, though it supports a variety of curves, example: Curve25519 (X25519), P256/512
-      - **Encryption Schemes - ECIES, DHIES, RSA-KEM, RSA-OAEP.**
-      Asymmetric Constructions - RSA family (can be used for KEM, KEX, & DSA)
+  - PKC is utilised to safely transfer a symmetric key (used for encryption of critical data), from one end to the other, by making use of asymmetric algorithms, or Key exchanges like Diffie Hellman (or ECDH). The main crux of PKC is that, we are using a publicly available key for encrypting some data, and only the corresponding priv key can be used to decrypt it back (reason why it's asymmetric: keys for enc and dec are different).
+    
+    - Cryptographic protocols, primitives & constructions used:
+      
+      - **Diffie Hellman KEX, following protocols are the extensions of this: ECDH, El Gamal, X3DH, PQXDHE.**
+      - Elliptic Curve Crypt - based on the ECDLP problem, the PKC techniques utilising this are:
+          - ECDH(E)
+          - ECDSA
+          - EdDSA
+            ECC is a cryptographic primitive over which the above mentioned techniques/protocols are built upon.
+      - RSA:
+          - RSA PKCS#1-15 (from 1 to 15) : a set of standards, techniques that use the RSA crypt primitive.
+            - RSA PKCS#1.5 (incorporates RSA-OAEP)
+          - can be used for KEM, KEX, & DSA, [RSA KEM](https://datatracker.ietf.org/doc/html/rfc5990)
+            [Read More here](https://www.spiceworks.com/it-security/network-security/articles/what-is-pkcs/#:~:text=PKCS%20%231%20%E2%80%93%20RSA%20cryptography%20standard,format%20of%20the%20digital%20certificate.)
+      - **Encryption Schemes - ECIES, DHIES, DH Ratchet, Signal Protocol, RSA-KEM** <br/>
+
       RSA-OAEP is used for making the RSA Key Exchange **IND-CPA & IND-CCA secure.** Plain Old RSA has been deprecated.
       ![image](https://github.com/lakshya-chopra/KyberCpp/assets/77010972/46927e56-adce-47c7-a808-33bdb321d840)
 
