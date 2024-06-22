@@ -99,3 +99,6 @@
 11. [A Brief Overview](http://www.cse.iitm.ac.in/~shwetaag/PQC-Overview.pdf)
 12. [ML KEM - NIST](https://nvlpubs.nist.gov/nistpubs/FIPS/NIST.FIPS.203.ipd.pdf)
 13. [PQ Signature Schemes](https://blog.cloudflare.com/post-quantum-signatures)
+14. [PQ TLS](https://engineering.fb.com/2024/05/22/security/post-quantum-readiness-tls-pqr-meta)
+15. [Performance Comparison of PQC](https://blog.cloudflare.com/nist-post-quantum-surprise#kyber)
+16. [NIST Slides](https://csrc.nist.gov/CSRC/media/Presentations/pqc-update-round-2-and-beyond/images-media/pqcrypto-sept2020-moody.pdf)
