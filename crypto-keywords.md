@@ -66,5 +66,7 @@ Here's a concise division of all the commonly used cryptographic primitives & co
 [Book](https://cryptobook.nakov.com/)
 [Overview of Cryptography](https://medium.com/@sinister/overview-of-cryptography-c7349b92a72b)
 [An Exploration on Group & Ring Signatures](https://cseweb.ucsd.edu/~smeiklejohn/files/researchexam.pdf)
+[how whatsapp secures our messages](https://crypto.stackexchange.com/questions/58443/if-whatsapp-cannot-read-our-message-how-can-the-media-forwarding-happen-in-an-i?noredirect=1&lq=1)
+[PKC for multiple recipients](https://crypto.stackexchange.com/questions/86483/using-public-key-cryptography-with-multiple-recipients)
 
     
