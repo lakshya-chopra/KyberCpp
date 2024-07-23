@@ -102,3 +102,4 @@
 14. [PQ TLS](https://engineering.fb.com/2024/05/22/security/post-quantum-readiness-tls-pqr-meta)
 15. [Performance Comparison of PQC](https://blog.cloudflare.com/nist-post-quantum-surprise#kyber)
 16. [NIST Slides](https://csrc.nist.gov/CSRC/media/Presentations/pqc-update-round-2-and-beyond/images-media/pqcrypto-sept2020-moody.pdf)
+17. [PQ TLS NOTES](https://educatedguesswork.org/posts/pq-tls12/)
