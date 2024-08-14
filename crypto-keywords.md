@@ -62,17 +62,16 @@ Here's a concise division of all the commonly used cryptographic primitives & co
   - [SSL/TLS PKI](https://security.stackexchange.com/questions/87564/how-does-ssl-tls-pki-work/89072#89072)
       
 
+## References:
 
-[Book](https://cryptobook.nakov.com/)
-
-[Overview of Cryptography](https://medium.com/@sinister/overview-of-cryptography-c7349b92a72b)
-
-[An Exploration on Group & Ring Signatures](https://cseweb.ucsd.edu/~smeiklejohn/files/researchexam.pdf)
-
-[how whatsapp secures our messages](https://crypto.stackexchange.com/questions/58443/if-whatsapp-cannot-read-our-message-how-can-the-media-forwarding-happen-in-an-i?noredirect=1&lq=1)
-
-[PKC for multiple recipients](https://crypto.stackexchange.com/questions/86483/using-public-key-cryptography-with-multiple-recipients)
-
-[ NaCl](https://doc.libsodium.org/secret-key_cryptography/secretbox)
+1. [Book](https://cryptobook.nakov.com/)
+2. [Overview of Cryptography](https://medium.com/@sinister/overview-of-cryptography-c7349b92a72b)
+3. [An Exploration on Group & Ring Signatures](https://cseweb.ucsd.edu/~smeiklejohn/files/researchexam.pdf)
+4. [how whatsapp secures our messages](https://crypto.stackexchange.com/questions/58443/if-whatsapp-cannot-read-our-message-how-can-the-media-forwarding-happen-in-an-i?noredirect=1&lq=1)
+5. [PKC for multiple recipients](https://crypto.stackexchange.com/questions/86483/using-public-key-cryptography-with-multiple-recipients)
+6. [NaCl](https://doc.libsodium.org/secret-key_cryptography/secretbox)
+7. [HPKE 1](https://www.csa.iisc.ac.in/~arpita/Cryptography15/Scribe10D.pdf)
+8. [HPKE 2](https://www.franziskuskiefer.de/p/tldr-hybrid-public-key-encryption/)
+9. [RSA Paper](https://people.csail.mit.edu/rivest/Rsapaper.pdf)
 
     
