@@ -106,3 +106,6 @@
 18. [Kyber 2 way handshake KEX](https://leancrypto.org/papers/KyberKEX_2way_handshake_specification.pdf)
 19. [TLS and Kyber analysis](https://leancrypto.org/papers/TLS_and_Kyber_analysis.pdf)
 20. [PQ HPKE](https://eprint.iacr.org/2022/414.pdf)
+
+
+SPECIAL: [PQC for engineers](https://datatracker.ietf.org/doc/draft-ietf-pquip-pqc-engineers/)
