@@ -103,3 +103,6 @@
 15. [Performance Comparison of PQC](https://blog.cloudflare.com/nist-post-quantum-surprise#kyber)
 16. [NIST Slides](https://csrc.nist.gov/CSRC/media/Presentations/pqc-update-round-2-and-beyond/images-media/pqcrypto-sept2020-moody.pdf)
 17. [PQ TLS NOTES](https://educatedguesswork.org/posts/pq-tls12/)
+18. [Kyber 2 way handshake KEX](https://leancrypto.org/papers/KyberKEX_2way_handshake_specification.pdf)
+19. [TLS and Kyber analysis](https://leancrypto.org/papers/TLS_and_Kyber_analysis.pdf)
+20. [PQ HPKE](https://eprint.iacr.org/2022/414.pdf)
